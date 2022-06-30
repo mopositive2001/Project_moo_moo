@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 body{
     margin: 0;
 }
 .img{
+    position:absolute;
     height:100vh;
     width:100vw;
     background-image: url("https://wallpapertag.com/wallpaper/full/0/2/5/203441-new-dark-anime-background-scenery-1920x1080-for-mobile-hd.jpg"); 
     opacity:0.5; 
     z-index: -3; 
-    filter: brightness(0.5)
+    filter: brightness(0.5);
+    background-size:contain;
 }
 .parent{
     height:auto;
@@ -36,16 +40,25 @@ body{
     left:35%;
     z-index: -1;
 }
+
+
 .inside{
     position:absolute;
     height: 92%; 
     width: 90%;
     /*padding:100px;*/
     border-radius: 10px;
-    background-image: linear-gradient(-135deg, rgb(242, 114, 114), rgb(76, 132, 216));
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    /* z-index: -1; */
+}
+.homeScreen{
+    background-image: linear-gradient(-135deg, rgb(242, 114, 114), rgb(76, 132, 216));
+}
+.messageApp{
+    background-color: white;
+    z-index: -100;
 }
 
 .button{
@@ -61,4 +74,49 @@ body{
     border-width:2px;
     border-style:solid;
     border-color:rgb(214, 214, 214);
+}
+
+.icon{
+    position:absolute;
+    background-image: url("message_icon.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    margin-left:20px;
+    margin-top:30px;
+    height:70px;
+    width:70px;
+    top:-4px;
+    animation: bounces 1s infinite ease-in-out;
+}
+
+@keyframes bounces {
+    0%{
+        top:-4px;
+    }
+    50%{
+        top: 4px;
+    }
+    100%{
+        top:-4px;
+    }
+}
+
+.click_message{
+    position:absolute;
+    height: 20px;
+    width: 80px;
+    top:110px;
+    left: 15px;
+    background-color: rgba(255, 255, 255, 0.372);
+    display:none;
+    text-align:center;
+    border-radius: 5px;
+    color: rgb(57, 57, 57);
+    font-family: 'Itim';
+    font-weight: bold;
+    
+}
+
+.icon:hover + .click_message{
+    display:block;
 }
