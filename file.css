@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap');
 
 body{
     margin: 0;
@@ -11,18 +12,18 @@ body{
     opacity:0.5; 
     z-index: -3; 
     filter: brightness(0.5);
-    background-size:contain;
+    background-size:cover;
 }
 .parent{
     height:auto;
     width:auto;
 }
 .outside{
+    position: absolute;
     height:90%;
     width:25%;
     border-radius: 50px;
     background-color: rgb(32, 32, 32);
-    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -39,8 +40,8 @@ body{
     top: 50px;
     left:35%;
     z-index: -1;
+    
 }
-
 
 .inside{
     position:absolute;
@@ -58,7 +59,8 @@ body{
 }
 .messageApp{
     background-color: white;
-    z-index: -100;
+    z-index: -10;
+    opacity:0;
 }
 
 .button{
@@ -81,23 +83,24 @@ body{
     background-image: url("message_icon.png");
     background-size:contain;
     background-repeat:no-repeat;
-    margin-left:20px;
-    margin-top:30px;
-    height:70px;
-    width:70px;
-    top:-4px;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%);
+    height:30%;
+    width:30%;
+    /* top:-4px;  */
     animation: bounces 1s infinite ease-in-out;
 }
 
 @keyframes bounces {
     0%{
-        top:-4px;
+        top:60%;
     }
     50%{
-        top: 4px;
+        top: 62%;
     }
     100%{
-        top:-4px;
+        top:60%;
     }
 }
 
@@ -105,16 +108,28 @@ body{
     position:absolute;
     height: 20px;
     width: 80px;
-    top:110px;
-    left: 15px;
+    top:78%;
+    left: 50%;
+    transform: translate(-50%);
     background-color: rgba(255, 255, 255, 0.372);
     display:none;
     text-align:center;
     border-radius: 5px;
-    color: rgb(57, 57, 57);
+    color: black;
     font-family: 'Itim';
     font-weight: bold;
     
+}
+.time{
+    position: absolute;
+    width:100%;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 400%;
+    color:rgba(250, 250, 250, 0.443);
+    top: 20%;
+    left:50%;
+    transform: translate(-50%);
+    text-align: center;
 }
 
 .icon:hover + .click_message{
