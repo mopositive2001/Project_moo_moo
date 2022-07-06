@@ -18,6 +18,10 @@ $(document).ready(function(){
         $("#shadow").css("top", 12 + "%");
         console.log("CHecesdfsf");
     }
+
+    var today_first= new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    document.getElementById("time").innerHTML =today_first;
+
 })
 
 setInterval(()=>{

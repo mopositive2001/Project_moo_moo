@@ -58,7 +58,7 @@ body{
     background-image: linear-gradient(-135deg, rgb(242, 114, 114), rgb(76, 132, 216));
 }
 .messageApp{
-    background-color: white;
+    background-color: black;
     z-index: -10;
     opacity:0;
 }
@@ -103,23 +103,6 @@ body{
         top:60%;
     }
 }
-
-.click_message{
-    position:absolute;
-    height: 20px;
-    width: 80px;
-    top:78%;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: rgba(255, 255, 255, 0.372);
-    display:none;
-    text-align:center;
-    border-radius: 5px;
-    color: black;
-    font-family: 'Itim';
-    font-weight: bold;
-    
-}
 .time{
     position: absolute;
     width:100%;
@@ -132,6 +115,78 @@ body{
     text-align: center;
 }
 
+.click_message{
+    position:absolute;
+    height: 20px;
+    width: 80px;
+    top:80%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.372);
+    display:none;
+    text-align:center;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Itim';
+    font-weight: bold;   
+}
+
 .icon:hover + .click_message{
     display:block;
+}
+
+.blurContact{
+    /* filter: blur(1px); */
+    /* background-color: rgba(158, 234, 255, 0.932); */
+    background-image: linear-gradient(rgba(158, 234, 255, 1),rgba(158, 234, 255, 0.9));
+}
+.contact{
+    position: absolute;
+    height:15%;
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    top:0%;
+}
+.picName{
+    position: absolute;
+    left:50%;
+    top:75%;
+    transform: translate(-50%);
+    font-family: 'Itim';
+}
+
+.pic{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius:100px;
+    background-image: url("cat.png");
+    background-size: cover;
+}
+
+.space{
+    position: absolute;
+    height: 65%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+}
+.frame{
+    top:-15%;
+    width:98%;
+    height:100%;
+}
+
+.messageOption{
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    top:65%;
+    background-color: cyan;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
