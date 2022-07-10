@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 body{
     margin: 0;
@@ -135,11 +136,6 @@ body{
     display:block;
 }
 
-.blurContact{
-    /* filter: blur(1px); */
-    /* background-color: rgba(158, 234, 255, 0.932); */
-    background-image: linear-gradient(rgba(158, 234, 255, 1),rgba(158, 234, 255, 0.9));
-}
 .contact{
     position: absolute;
     height:15%;
@@ -147,13 +143,24 @@ body{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     top:0%;
+    background-image: linear-gradient(rgba(158, 234, 255, 1),rgba(158, 234, 255, 0.93));
+    z-index: 10;
 }
+/* .blurContact{
+    position: absolute;
+    height:7%;
+    width:95%;
+    top:5%;
+    filter: blur(10px);
+    background-color: rgba(158, 234, 255, 0.90);
+    z-index: 5;
+} */
 .picName{
     position: absolute;
     left:50%;
     top:75%;
     transform: translate(-50%);
-    font-family: 'Itim';
+    font-family: 'Raleway', sans-serif;
 }
 
 .pic{
@@ -168,17 +175,19 @@ body{
     background-size: cover;
 }
 
-.space{
+.frameSpace{
     position: absolute;
-    height: 65%;
+    height:100%;
     width: 100%;
-    background-color: black;
-    z-index: -1;
+    background-color: rgb(255, 255, 255);
+    z-index:-1;
+    border-radius: 10px;
 }
 .frame{
-    top:-15%;
-    width:98%;
+    /* top:-15%; */
+    width:100%;
     height:100%;
+    border-radius: 10px;
 }
 
 .messageOption{
@@ -189,4 +198,62 @@ body{
     background-color: cyan;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    z-index:-20;
 }
+
+.messageBarSpace{
+    position: absolute;
+    height:7%;
+    width:100%;
+    top:93%;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.messageBar{
+    position: absolute;
+    height:auto;
+    width:85%;
+    top:50%;
+    left: 2%;
+    transform: translate(0%,-50%);
+    border-width:1px;
+    border-style:solid;
+    border-color: rgba(83, 82, 82, 0.479);
+    border-radius: 20px;
+    padding:0px;
+}
+
+.messageBar p{
+    position:relative;
+    margin: 8px;
+    font-size: 12px;
+    vertical-align:top;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sendButton{
+    position: absolute;
+    height:auto;
+    width:9.5%;
+    top:50%;
+    transform: translate(0%,-50%);
+    left:88.5%;
+    border-width:1px;
+    border-style:solid;
+    border-color: rgba(83, 82, 82, 0.479);
+    background-color: grey;
+    color:white;
+    border-radius: 100px;
+    padding:0px;
+}
+
+.sendButton p{
+    position:relative;
+    margin: 3px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 17px;
+}
+

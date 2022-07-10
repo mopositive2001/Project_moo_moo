@@ -7,7 +7,7 @@ $(document).ready(function(){
         document.getElementById("messageApp").style.opacity=1;
         $("#messageApp").toggle("scale");
     })
-    document.getElementById("outside").style.zIndex = 200;
+    // document.getElementById("outside").style.zIndex = 200;
    
     if($(window).height()>$(window).width()){
         $("#outside").css("height", 70 + "%");
@@ -20,12 +20,16 @@ $(document).ready(function(){
     }
 
     var today_first= new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    document.getElementById("time").innerHTML =today_first;
+    if(document.getElementById("time")!=null){
+        document.getElementById("time").innerHTML =today_first;
+    }
 
 })
 
 setInterval(()=>{
     var today= new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     console.log(today);
-    document.getElementById("time").innerHTML =today;
+    if(document.getElementById("time")!=null){
+        document.getElementById("time").innerHTML =today;
+    }
 },1000)
