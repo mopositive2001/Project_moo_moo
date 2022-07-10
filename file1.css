@@ -27,6 +27,16 @@ body::-webkit-scrollbar { width: 0 !important }
     background-image: linear-gradient( rgb(244, 158, 255),rgb(234, 75, 255));
     font-family: 'Raleway', sans-serif;
     color:white;
+    animation: fadein 1s forwards;
+}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .receive{

@@ -6,6 +6,9 @@ $(document).ready(function(){
         document.getElementById("messageApp").style.zIndex = 100;
         document.getElementById("messageApp").style.opacity=1;
         $("#messageApp").toggle("scale");
+        setTimeout(() => {
+            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>Hello, my name is Vanessa</p></div>');
+        }, 700)
     })
     // document.getElementById("outside").style.zIndex = 200;
    
@@ -16,7 +19,6 @@ $(document).ready(function(){
         $("#shadow").css("width", 70 + "%");
         $("#shadow").css("left", 10 + "%");
         $("#shadow").css("top", 12 + "%");
-        console.log("CHecesdfsf");
     }
 
     var today_first= new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -24,6 +26,16 @@ $(document).ready(function(){
         document.getElementById("time").innerHTML =today_first;
     }
 
+    $("#messageBarSpace").click(function(){
+        $("#frame").contents().find("#textContainer").append('<div class="textBubble send"><p>What do you like?</p></div>');
+        $("#frame").contents().scrollTop($("#frame").contents().height());
+
+        setTimeout(() => {
+            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>I like food.</p></div>');
+            $("#frame").contents().scrollTop($("#frame").contents().height());
+    }, 1000)
+        // .scrollTo(0, document.body.scrollHeight);
+    })
 })
 
 setInterval(()=>{
