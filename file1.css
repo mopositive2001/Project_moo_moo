@@ -27,24 +27,37 @@ body::-webkit-scrollbar { width: 0 !important }
     background-image: linear-gradient( rgb(244, 158, 255),rgb(234, 75, 255));
     font-family: 'Raleway', sans-serif;
     color:white;
-    animation: fadein 1s forwards;
 }
 
-@keyframes fadein {
+@keyframes fadeinRight {
     0%{
         opacity: 0;
+        transform: translate(50%);
     }
     100%{
         opacity: 1;
+        transform: translate(0%);
+    }
+}
+@keyframes fadeinLeft {
+    0%{
+        opacity: 0;
+        transform: translate(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0%);
     }
 }
 
 .receive{
     margin-left: 2%;
     align-self: flex-start;
+    animation: fadeinLeft 1s forwards;
 }
 
 .send{
     align-self: flex-end;
     margin-right: 2%; 
+    animation: fadeinRight 1s forwards;
 }
