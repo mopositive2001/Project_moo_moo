@@ -25,7 +25,7 @@ body::-webkit-scrollbar { width: 0 !important }
     padding-left:20px;
     padding-right:20px;
     border-radius: 15px;
-    background-image: linear-gradient( rgb(244, 158, 255),rgb(234, 75, 255));
+    background-image: linear-gradient( rgb(255, 164, 164),rgb(255, 62, 239));
     font-family: 'Raleway', sans-serif;
     color:white;
 }
@@ -61,4 +61,5 @@ body::-webkit-scrollbar { width: 0 !important }
     align-self: flex-end;
     margin-right: 2%; 
     animation: fadeinRight 1s forwards;
+    background-image: linear-gradient( rgb(135, 250, 179),rgb(75, 204, 255));
 }

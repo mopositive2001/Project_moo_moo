@@ -140,6 +140,7 @@ body{
 
 .click_message{
     position:absolute;
+    padding: 5px;
     height: 20px;
     width: 80px;
     top:80%;
@@ -148,9 +149,9 @@ body{
     background-color: rgba(255, 255, 255, 0.372);
     display:none;
     text-align:center;
-    border-radius: 5px;
+    border-radius: 50px;
     color: black;
-    font-family: 'Itim';
+    font-family: 'Raleway', sans-serif;
     font-weight: bold;   
 }
 
@@ -382,14 +383,13 @@ body{
 }
 
 .contactCard{
-    position:relative;
+    position:absolute;
     height:50%;
     width:100%;
-    top:50%;
+    top:200%;
     background-color:rgb(131, 131, 228);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    display:none;
     
 }
 

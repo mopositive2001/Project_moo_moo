@@ -68,7 +68,7 @@ $(document).ready(function(){
         },700)
         
         setTimeout(() => {
-            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>message1 response</p></div>');
+            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>I am a junior Computer Engineering student at the prestigous institution widely refered to and known as Texas A&M. I code sometimes.</p></div>');
             $("#frame").contents().scrollTop($("#frame").contents().height());
         },1400)
     })
@@ -128,17 +128,26 @@ $(document).ready(function(){
     })
 
     //When moreInfo icon is clicked, ContactCard slides in
+    let counter = 0
     $("#moreInfo").click(function(){
-        console.log("hello");
-        document.getElementById("contactCard").style.display="block";
-        document.getElementById("contactCard").style.animation="slideIn 1s";
+        if(counter % 2 == 0){
+            document.getElementById("contactCard").style.top="50%";
+            document.getElementById("contactCard").style.animation="slideIn 1s";
+        }
+        else{
+            document.getElementById("contactCard").style.top="200%";
+            document.getElementById("contactCard").style.animation="slideOut 2s";
+        }
+        ++counter
+        
     })
     //When click on the closeButton on contactCard, contactCard slides out
     $("#closeButton").click(function(){
+        document.getElementById("contactCard").style.top="200%";
         document.getElementById("contactCard").style.animation="slideOut 2s";
-        setTimeout(() => {
+        /*setTimeout(() => {
             document.getElementById("contactCard").style.display="none";
-        },2000)
+        },2000)*/
     })
 
 })
