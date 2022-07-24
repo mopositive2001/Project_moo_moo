@@ -96,12 +96,13 @@ $(document).ready(function(){
             info.borderWidth= "2px";
             info.borderColor="red";
             info.color="red";
-            info.animation = "bouncesMoreInfo 1s 7 ease-in-out";
+            info.animation = "bouncesMoreInfo 1s infinite ease-in-out";
         },2400)  //add 1 second for the user to read the message first
 
         //reset moreInfo icon to normal
         setTimeout(() => {
             var info = document.getElementById("moreInfo").style;
+            info.animation="none";
             info.top="75%"
             info.borderWidth= "1.33px";
             info.borderColor="black";
@@ -126,11 +127,18 @@ $(document).ready(function(){
         },1400)  
     })
 
-    //When moreInfo icon is clicked
+    //When moreInfo icon is clicked, ContactCard slides in
     $("#moreInfo").click(function(){
         console.log("hello");
         document.getElementById("contactCard").style.display="block";
         document.getElementById("contactCard").style.animation="slideIn 1s";
+    })
+    //When click on the closeButton on contactCard, contactCard slides out
+    $("#closeButton").click(function(){
+        document.getElementById("contactCard").style.animation="slideOut 2s";
+        setTimeout(() => {
+            document.getElementById("contactCard").style.display="none";
+        },2000)
     })
 
 })
@@ -153,6 +161,8 @@ function closeDialog(){
         }, 300)
     }, 300);
 }
+
+
 
 setInterval(()=>{
     var today= new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
