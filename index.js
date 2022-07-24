@@ -147,7 +147,11 @@ $(document).ready(function(){
         document.getElementById("contactCard").style.animation="slideOut 2s";
         /*setTimeout(() => {
             document.getElementById("contactCard").style.display="none";
+<<<<<<< HEAD
         },2000)*/
+=======
+        },1000)
+>>>>>>> 4ff003b42d9473ac6e89f8290f8f69c3e869e5f0
     })
 
 })
