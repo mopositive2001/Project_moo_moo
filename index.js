@@ -138,7 +138,7 @@ $(document).ready(function(){
         document.getElementById("contactCard").style.animation="slideOut 2s";
         setTimeout(() => {
             document.getElementById("contactCard").style.display="none";
-        },2000)
+        },1000)
     })
 
 })
