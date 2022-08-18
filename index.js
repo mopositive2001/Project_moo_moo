@@ -131,22 +131,37 @@ $(document).ready(function(){
     let counter = 0
     $("#moreInfo").click(function(){
         if(counter % 2 == 0){
-            document.getElementById("contactCard").style.top="50%";
+            document.getElementById("contactCard").style.top="70%";
             document.getElementById("contactCard").style.animation="slideIn 1s";
         }
-        else{
+        else{//when moreInfo is clicke again, ContactCard slides out
             document.getElementById("contactCard").style.top="200%";
-            document.getElementById("contactCard").style.animation="slideOut 2s";
+            document.getElementById("contactCard").style.animation="slideOut 1s";
         }
         ++counter
-        
     })
+
     //When click on the closeButton on contactCard, contactCard slides out
     $("#closeButton").click(function(){
         document.getElementById("contactCard").style.top="200%";
-        document.getElementById("contactCard").style.animation="slideOut 2s";
+        document.getElementById("contactCard").style.animation="slideOut 1s";
+        counter++; //increment to make counter even for ContactCard to slides in the next time moreInfo icon is clicked 
     })
 
+    //When clicked on the Linkedin app
+    $("#linkedin").click(function(){
+        window.open("https://www.linkedin.com/in/vanessa-le-a82335199/", "_blank");
+    })
+
+    //When clicked on the Resume app
+    $("#resume").click(function(){
+        window.open("Le_Vanessa_CECN_2023_Resume.pdf", "_blank");
+    })
+
+    //When clicked on the Email app
+    $("#email").click(function(){
+        window.location.href = "mailto:mopositive@icloud.com";
+    })
 })
 
 //Collapsing Dialog after selecting a question
@@ -167,7 +182,6 @@ function closeDialog(){
         }, 300)
     }, 300);
 }
-//cat
 
 
 

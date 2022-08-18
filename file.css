@@ -5,7 +5,7 @@
 
 body{
     margin: 0;
-    overflow-y:auto;
+    overflow-y:scroll;
     overflow-x: hidden;
 }
 .img{
@@ -18,7 +18,7 @@ body{
     opacity:0.5; 
     z-index: -3; 
     filter: brightness(0.5);
-    background-size:contain;
+    background-size:cover;
 }
 .parent{
     height:100vh;
@@ -384,10 +384,10 @@ body{
 
 .contactCard{
     position:absolute;
-    height:50%;
+    height:30%;
     width:100%;
     top:200%;
-    background-color:rgb(131, 131, 228);
+    background-image: linear-gradient(rgba(255, 164, 177, 0.86),rgb(169, 146, 255));
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     
@@ -398,7 +398,7 @@ body{
         top:200%
     }
     100%{
-        top:50%;
+        top:70%;
     }
 }
 
@@ -414,9 +414,85 @@ body{
 
 @keyframes slideOut{
     0%{
-        top:50%
+        top:70%
     }
     100%{
         top:200%;
+    }
+}
+
+.appList{
+    position:absolute;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height:70%;
+    width:90%;
+    left: 50%;
+    top:10%;
+    transform: translate(-51%);
+}
+
+.app{
+    position:relative;
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:45%; 
+    width:45%;
+    background-position: center;
+    margin-left:1%;
+}
+
+.linkedin{
+    background-image: url("linkedin.png");
+}
+
+.resume{
+    background-image: url("resume.png"); 
+}
+
+.email{
+    background-image: url("email.png"); 
+}
+
+.name{
+    position:absolute;
+    height:auto;
+    width:auto;
+    font-family: 'Raleway', sans-serif;
+    color:white;
+    top:57%;
+}
+
+.linkedinName{
+    left:11.5%;
+}
+.linkedin:hover{
+    animation: iconhover 1s ;
+}
+
+.resumeName{
+    left:41.5%;
+}
+.resume:hover{
+    animation: iconhover 1s ;
+}
+
+.emailName{
+    left:74.3%;
+}
+.email:hover{
+    animation: iconhover 1s ;
+}
+
+@keyframes iconhover{
+    0%{
+        padding-bottom:0%;
+    }
+    50%{
+        padding-bottom:5%;
+    }
+    100%{
+        padding-bottom:0%;
     }
 }
