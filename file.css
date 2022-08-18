@@ -8,6 +8,8 @@ body{
     overflow-y:scroll;
     overflow-x: hidden;
 }
+body::-webkit-scrollbar { width: 0 !important }
+
 .img{
     position:absolute;
     height:100vh;
