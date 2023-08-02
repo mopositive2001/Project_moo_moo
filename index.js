@@ -68,7 +68,7 @@ $(document).ready(function(){
         },700)
         
         setTimeout(() => {
-            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>I am a junior Computer Engineering student at the prestigous institution widely refered to and known as Texas A&M. I code sometimes.</p></div>');
+            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>I am a senior Computer Engineering student at Texas A&M University. I code sometimes.</p></div>');
             $("#frame").contents().scrollTop($("#frame").contents().height());
         },1400)
     })
@@ -122,7 +122,7 @@ $(document).ready(function(){
         },700)
         
         setTimeout(() => {
-            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>I like food. I also like traveling because I can try different food in diffent cultures. In my free time, I watch people eat for fun because I like food. </p></div>');
+            $("#frame").contents().find("#textContainer").append('<div class="textBubble receive"><p>I like food. I also like traveling because I can try different food in diffent cultures. </p></div>');
             $("#frame").contents().scrollTop($("#frame").contents().height());
         },1400)  
     })
@@ -182,8 +182,6 @@ function closeDialog(){
         }, 300)
     }, 300);
 }
-
-
 
 setInterval(()=>{
     var today= new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
