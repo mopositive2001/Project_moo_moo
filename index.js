@@ -155,7 +155,7 @@ $(document).ready(function(){
 
     //When clicked on the Resume app
     $("#resume").click(function(){
-        window.open("Le_Vanessa_CE_Resume.pdf", "_blank");
+        window.open("Le_Vanessa_resume.pdf", "_blank");
     })
 
     //When clicked on the Email app
